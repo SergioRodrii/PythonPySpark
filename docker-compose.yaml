@@ -6,6 +6,6 @@ services:
     container_name: spark_ventas
     volumes:
       - ./procesar_ventas.py:/app/procesar_ventas.py
-      - ./ventas.csv:/app/hecho_ventas.csv
+      - ./hecho_ventas.csv:/app/hecho_ventas.csv
     working_dir: /app
     command: tail -f /dev/null  
