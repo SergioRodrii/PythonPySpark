@@ -12,7 +12,7 @@ spark = SparkSession.builder \
     .appName("Laboratorio Ventas Spark") \
     .getOrCreate()
 
-df = spark.read.csv("ventas.csv", header=True, inferSchema=True)
+df = spark.read.csv("/app/hecho_ventas.csv", header=True, inferSchema=True)
 
 df = df.withColumn("total", col("cantidad") * col("precio_unitario"))
 
